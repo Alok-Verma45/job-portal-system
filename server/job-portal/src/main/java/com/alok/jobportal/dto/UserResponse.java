@@ -1,0 +1,4 @@
+package com.alok.jobportal.dto;
+
+public class UserResponse {
+}
