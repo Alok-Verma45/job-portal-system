@@ -1,5 +1,7 @@
 package com.alok.jobportal.controller;
 
+import com.alok.jobportal.dto.AuthResponse;
+import com.alok.jobportal.dto.LoginRequest;
 import com.alok.jobportal.dto.RegisterRequest;
 import com.alok.jobportal.entity.User;
 import com.alok.jobportal.service.AuthService;
@@ -20,5 +22,10 @@ public class AuthController {
     @PostMapping("/register")
     public User register(@Valid @RequestBody RegisterRequest request) {
         return authService.register(request);
+    }
+
+    @PostMapping("/login")
+    public AuthResponse login(@Valid @RequestBody LoginRequest request) {
+        return authService.login(request);
     }
 }
