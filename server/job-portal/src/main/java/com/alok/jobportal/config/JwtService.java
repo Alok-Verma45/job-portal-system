@@ -28,7 +28,7 @@ public class JwtService {
 
     public String extractEmail(String token) {
         Claims claims = Jwts.parser()
-                .setSigningKey(getSignKey())   // ✅ works
+                .setSigningKey(getSignKey())
                 .build()
                 .parseClaimsJws(token)
                 .getBody();
